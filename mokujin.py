@@ -17,9 +17,9 @@ RPC = Presence(client_id)
 RPC.connect()
 
 presences = [
-  "in Training Mode"
-  "Tekken 7"
-  "with my code"
+  "in Training Mode",
+  "Tekken 7",
+  "with my code",
   "around in the JSON"
 ]
 
