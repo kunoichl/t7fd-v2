@@ -3,6 +3,7 @@ import os, sys
 import datetime
 import asyncio
 
+import pypresence
 from pypresence import Presence
 import time
 import random
