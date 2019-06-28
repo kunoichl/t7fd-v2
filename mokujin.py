@@ -5,27 +5,11 @@ import asyncio
 
 from pypresence import Presence
 import time
-import random
 
 import discord
 from discord.ext import commands
 
 import tkfinder
-
-client_id = '594075358165467196'
-RPC = Presence(client_id)
-RPC.connect()
-
-presences = {
-  "in Training Mode",
-  "Tekken 7",
-  "with my code",
-  "around in the JSON"
-  }
-
-while True:
-  RPC.update(details="Playing", state=random.choice(presences))
-  time.sleep(30)
 
 prefix = '§'
 description = 'The premier Tekken 7 Frame bot, made by Baikonur#4927'
@@ -105,7 +89,7 @@ async def test(ctx):
     embed = discord.Embed(title='Test title', description='A test embed thing.', colour=0x0000FF)
     embed.set_author(name='Test name', icon_url=bot.user.default_avatar_url)
     await ctx.send(embed=embed, delete_after=60)
-
+    
 @bot.event
 async def on_message(message):
     '''This has the main functionality of the bot. It has a lot of
@@ -200,4 +184,14 @@ async def on_message(message):
 
             return
     await bot.process_commands(message)
+
+client_id = '594075358165467196'
+RPC = Presence(client_id)
+RPC.connect()
+
+print(RPC.update(state="Lookie Lookie", details="A test of qwertyquerty's Python Discord RPC wrapper, pypresence!"))
+
+while True:  
+    time.sleep(15)
+    
 bot.run(token)
