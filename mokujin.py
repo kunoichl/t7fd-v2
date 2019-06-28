@@ -3,10 +3,29 @@ import os, sys
 import datetime
 import asyncio
 
+from pypresence import Presence
+import time
+import random
+
 import discord
 from discord.ext import commands
 
 import tkfinder
+
+client_id = '594075358165467196'
+RPC = Presence(client_id)
+RPC.connect()
+
+presences = [
+  "in Training Mode"
+  "Tekken 7"
+  "with my code"
+  "around in the JSON"
+]
+
+while True:
+  RPC.update(state=random.choice(presences))
+  time.sleep(30)
 
 prefix = '§'
 description = 'The premier Tekken 7 Frame bot, made by Baikonur#4927'
