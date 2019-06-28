@@ -3,9 +3,6 @@ import os, sys
 import datetime
 import asyncio
 
-from pypresence import Presence
-import time
-
 import discord
 from discord.ext import commands
 
@@ -184,14 +181,4 @@ async def on_message(message):
 
             return
     await bot.process_commands(message)
-
-client_id = '594075358165467196'
-RPC = Presence(client_id)
-RPC.connect()
-
-print(RPC.update(state="Lookie Lookie", details="A test of qwertyquerty's Python Discord RPC wrapper, pypresence!"))
-
-while True:  
-    time.sleep(15)
-    
 bot.run(token)
