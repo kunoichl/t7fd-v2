@@ -112,6 +112,8 @@ async def on_message(message):
             chara_name = 'devil_jin'
         elif chara_name == 'sergei' or chara_name == 'drag' or chara_name == 'dragu':
             chara_name = 'dragunov'
+        elif chara_name == 'ed':
+            chara_name = 'eddy'
         elif chara_name == 'hwo' or chara_name == 'hwoa':
             chara_name = 'hwoarang'
         elif chara_name == 'jack':
