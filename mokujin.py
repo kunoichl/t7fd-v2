@@ -3,7 +3,6 @@ import os, sys
 import datetime
 import asyncio
 
-import pypresence
 from pypresence import Presence
 import time
 import random
@@ -17,15 +16,15 @@ client_id = '594075358165467196'
 RPC = Presence(client_id)
 RPC.connect()
 
-presences = [
+presences = {
   "in Training Mode",
   "Tekken 7",
   "with my code",
   "around in the JSON"
-]
+  }
 
 while True:
-  RPC.update(state=random.choice(presences))
+  RPC.update(details="Playing", state=random.choice(presences))
   time.sleep(30)
 
 prefix = '§'
