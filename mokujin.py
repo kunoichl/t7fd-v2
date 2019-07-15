@@ -106,7 +106,9 @@ async def on_message(message):
 
         chara_name = user_message_list[0].lower()
         chara_move = user_message_list[1]
-        if chara_name == 'armor' or chara_name == 'ak':
+        if chara_name == 'ali'
+            chara_name = 'alisa'
+        elif chara_name == 'armor' or chara_name == 'ak':
             chara_name = 'armor_king'
         elif chara_name == 'dj' or chara_name == 'dvj' or chara_name == 'djin' or chara_name == 'devil' or chara_name == 'deviljin':
             chara_name = 'devil_jin'
